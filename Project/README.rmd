@@ -19,6 +19,17 @@ rm(list = ls()) # Clean your environment:
 gc() # garbage collection - It can be useful to call gc after a large object has been removed, as this may prompt R to return memory to the operating system.
 library(tidyverse)
 list.files('code/', full.names = T, recursive = T) %>% .[grepl('.R', .)] %>% as.list() %>% walk(~source(.))
+library(readr)
 ```
 
+
+First, we start by importing the data:
+```{r}
+data <- read_csv("D:\\User folders\\Documents\\2023 Stellenbosch MCom (Economics)\\Semester 1\\Data Science for Economics and Finance 871\\Data_Science_Project\\Project\\data\\academy_awards.csv")
+```
+
+Now we want to create a dataframe of all best picture winners, and add values for whether they were nominated for any other awards.
+```{r}
+
+```
 
